@@ -2,13 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
+/* Design system: All colors are HSL */
 @layer base {
   :root {
-    /* ChainspaceHQ Theme - Updated Colors */
     --background: 0 0% 0%;
     --foreground: 0 0% 100%;
 
@@ -39,14 +35,12 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
 
-    /* ChainspaceHQ Specific Colors - Exact Brand Colors */
     --chainspace-black: 0 0% 0%;
     --chainspace-orange: 21 100% 50%;
     --chainspace-orange-bright: 21 100% 60%;
     --chainspace-white: 0 0% 100%;
     --chainspace-dark-gray: 0 0% 10%;
 
-    /* Special Effects */
     --starburst-glow: 21 100% 50%;
     --orbital-line: 0 0% 25%;
     --explosion-shadow: 21 100% 30%;
@@ -62,7 +56,6 @@ All colors MUST be HSL.
   }
 
   .dark {
-    /* ChainspaceHQ Theme - Dark Mode (Default) - Updated Colors */
     --background: 0 0% 0%;
     --foreground: 0 0% 100%;
 
@@ -112,7 +105,6 @@ All colors MUST be HSL.
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   }
 
-  /* Typography styles */
   .font-monument {
     font-family: 'Bebas Neue', 'Arial Black', sans-serif;
     font-weight: 400;
@@ -134,7 +126,6 @@ All colors MUST be HSL.
     position: relative;
     display: inline-block;
   }
-
   .starburst::before {
     content: '';
     position: absolute;
@@ -147,7 +138,6 @@ All colors MUST be HSL.
     z-index: -1;
     animation: burst-rotate 10s linear infinite;
   }
-
   .starburst::after {
     content: '';
     position: absolute;
@@ -155,7 +145,7 @@ All colors MUST be HSL.
     left: 50%;
     width: 150%;
     height: 150%;
-    background: 
+    background:
       linear-gradient(0deg, transparent 45%, hsla(var(--chainspace-orange), 0.6) 50%, transparent 55%),
       linear-gradient(45deg, transparent 45%, hsla(var(--chainspace-orange), 0.6) 50%, transparent 55%),
       linear-gradient(90deg, transparent 45%, hsla(var(--chainspace-orange), 0.6) 50%, transparent 55%),
@@ -169,22 +159,19 @@ All colors MUST be HSL.
   .orbital {
     position: relative;
   }
-
   .orbital-element {
     position: absolute;
     animation: orbit 20s linear infinite;
   }
-
   .orbital-element:nth-child(2) { animation-delay: -5s; }
   .orbital-element:nth-child(3) { animation-delay: -10s; }
   .orbital-element:nth-child(4) { animation-delay: -15s; }
 
-  /* Explosion Text Effect */
+  /* Explosion Text Effect (responsive) */
   .explosion-text {
-    font-weight: 900;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    text-shadow: 
+    @apply font-extrabold uppercase tracking-widest text-center;
+    @apply text-lg sm:text-2xl md:text-4xl lg:text-6xl;
+    text-shadow:
       0 0 10px hsla(var(--chainspace-orange), 0.8),
       0 0 20px hsla(var(--chainspace-orange), 0.6),
       0 0 30px hsla(var(--chainspace-orange), 0.4);
@@ -199,7 +186,7 @@ All colors MUST be HSL.
     width: 100%;
     height: 100%;
     opacity: 0.3;
-    background-image: 
+    background-image:
       linear-gradient(90deg, hsla(var(--orbital-line), 0.5) 1px, transparent 1px),
       linear-gradient(180deg, hsla(var(--orbital-line), 0.5) 1px, transparent 1px);
     background-size: 50px 50px;
@@ -208,32 +195,28 @@ All colors MUST be HSL.
 
   /* Value Badge */
   .value-badge {
-    background: radial-gradient(circle at center, 
+    background: radial-gradient(circle at center,
       hsla(var(--chainspace-orange), 1) 0%,
       hsla(var(--chainspace-orange), 0.8) 30%,
       hsla(var(--chainspace-orange), 0.1) 70%,
       transparent 100%);
     border: 2px solid hsl(var(--chainspace-orange));
-    box-shadow: 
+    box-shadow:
       0 0 20px hsla(var(--chainspace-orange), 0.5),
       inset 0 0 20px hsla(var(--chainspace-orange), 0.1);
   }
 
-  /* Explosive Button */
+  /* Explosive Button (responsive) */
   .explosive-btn {
-    position: relative;
-    background: linear-gradient(135deg, 
-      hsl(var(--chainspace-orange)) 0%, 
+    @apply relative overflow-hidden border-0 font-bold uppercase tracking-wider transition-all duration-300 rounded-md;
+    @apply text-sm px-3 py-2;
+    @apply sm:text-base sm:px-4 sm:py-3;
+    @apply lg:text-lg lg:px-6 lg:py-4;
+    background: linear-gradient(135deg,
+      hsl(var(--chainspace-orange)) 0%,
       hsl(var(--chainspace-orange-bright)) 100%);
-    border: none;
     color: hsl(var(--chainspace-black));
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    transition: all 0.3s ease;
-    overflow: hidden;
   }
-
   .explosive-btn::before {
     content: '';
     position: absolute;
@@ -241,21 +224,19 @@ All colors MUST be HSL.
     left: 50%;
     width: 0;
     height: 0;
-    background: radial-gradient(circle, 
-      hsla(var(--chainspace-white), 0.3) 0%, 
+    background: radial-gradient(circle,
+      hsla(var(--chainspace-white), 0.3) 0%,
       transparent 70%);
     transition: all 0.3s ease;
     transform: translate(-50%, -50%);
   }
-
   .explosive-btn:hover::before {
     width: 300%;
     height: 300%;
   }
-
   .explosive-btn:hover {
     transform: scale(1.05);
-    box-shadow: 
+    box-shadow:
       0 0 30px hsla(var(--chainspace-orange), 0.8),
       0 10px 30px hsla(var(--chainspace-orange), 0.4);
   }
@@ -265,27 +246,24 @@ All colors MUST be HSL.
   from { transform: translate(-50%, -50%) rotate(0deg); }
   to { transform: translate(-50%, -50%) rotate(360deg); }
 }
-
 @keyframes orbit {
   from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
   to { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
 }
-
 @keyframes text-glow {
-  from { 
-    text-shadow: 
+  from {
+    text-shadow:
       0 0 10px hsla(var(--chainspace-orange), 0.8),
       0 0 20px hsla(var(--chainspace-orange), 0.6),
       0 0 30px hsla(var(--chainspace-orange), 0.4);
   }
-  to { 
-    text-shadow: 
+  to {
+    text-shadow:
       0 0 15px hsla(var(--chainspace-orange), 1),
       0 0 25px hsla(var(--chainspace-orange), 0.8),
       0 0 35px hsla(var(--chainspace-orange), 0.6);
   }
 }
-
 @keyframes lines-shift {
   from { transform: translate(0, 0); }
   to { transform: translate(50px, 50px); }
