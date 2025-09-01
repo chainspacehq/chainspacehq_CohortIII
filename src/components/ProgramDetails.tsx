@@ -140,11 +140,6 @@ const ProgramDetails = () => {
                 </div>
               ))}
             </div>
-            <div className="mt-8 text-center">
-              <div className="bg-chainspace-black text-chainspace-orange px-6 py-3 rounded-full inline-block">
-                <span className="font-bold text-sm">APPLICATIONS CLOSE: September 10, 2025</span>
-              </div>
-            </div>
           </div>
         </div>
 

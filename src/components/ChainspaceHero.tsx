@@ -42,7 +42,7 @@ const ChainspaceHero = () => {
         <div className="text-center mb-8 max-w-4xl mx-auto">
           <div className="border-2 border-chainspace-orange rounded-lg p-4 md:p-6 bg-chainspace-black/50">
             <div className="text-chainspace-orange font-aspekta text-base md:text-lg font-bold mb-4">
-              [STARTING <span className="text-chainspace-white">15-09-2025</span> — ENDS <span className="text-chainspace-white">05-12-2025</span>.....]
+              [STARTING <span className="text-chainspace-white">15-09-2025</span> — ENDS 05-12-2025 <span className="text-chainspace-white"></span>]
             </div>
             <div className="text-chainspace-white font-aspekta text-base md:text-lg font-bold mb-2">
               EVERY MONDAY, WEDNESDAY, FRIDAY
