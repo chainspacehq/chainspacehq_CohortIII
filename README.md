@@ -36,8 +36,8 @@
 
 💼 *Outcomes from Past Cohorts:*
 
-* *Cohort I:* 18 Graduates • 12 Employed
-* *Cohort II:* 20 Graduates • 11 Employed
+* *Cohort I:* 20 Graduates • 
+* *Cohort II:* 31 Graduates • 
 * Build 3–5 real-world blockchain projects, gain industry-recognized certification, and access job placement support.
 
 📝 *Application Deadline:* September 10, 2025

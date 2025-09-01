@@ -11,8 +11,8 @@ const ProgramDetails = () => {
   ];
 
   const requirements = [
-    { icon: Laptop, title: "Functional Laptop Required", description: "Minimum 8GB RAM, 256GB storage, ability to run development tools", critical: true },
-    { icon: Clock, title: "Commitment to 21+ Hours/Week", description: "3 months dedication: 3 classes + self-study + project work", critical: true },
+    { icon: Laptop, title: "Functional Laptop Required", description: "Minimum 4GB RAM, 256GB storage, ability to run development tools", critical: true },
+    { icon: Clock, title: "Commitment to 21+ Hours/Week", description: "3 months dedication: 36 classes + self-study + project work", critical: true },
     { icon: Users, title: "Team Collaboration", description: "Willingness to work on group projects and peer programming", critical: false },
     { icon: MapPin, title: "Location Flexibility", description: "Based in or able to relocate to Uyo, Akwa Ibom for in-person classes", critical: true },
     { icon: DollarSign, title: "₦20,000 Logistics Commitment", description: "Covers meals, materials, and workspace maintenance (refundable with conditions)", critical: true }
@@ -132,7 +132,7 @@ const ProgramDetails = () => {
                     <h4 className="text-chainspace-black font-bold">{step}</h4>
                     <p className="text-chainspace-black text-sm">
                       {i===0 && "Complete online form with requirements"}
-                      {i===1 && "2-3 days application review"}
+                      {i===1 && "3-7 days application review"}
                       {i===2 && "Brief 15-minute phone interview"}
                       {i===3 && "Acceptance notification & next steps"}
                     </p>

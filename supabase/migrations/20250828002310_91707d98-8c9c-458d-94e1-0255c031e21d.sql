@@ -211,7 +211,7 @@ CREATE TRIGGER update_volunteer_applications_updated_at
 
 -- Insert initial cohort data
 INSERT INTO public.cohorts (name, cohort_number, start_date, status, description, max_participants, current_participants) VALUES
-('Chainspace Web3 Developer Cohort I', 1, '2024-01-15', 'completed', 'First successful cohort with 18 graduates, 12 employed', 20, 18),
+('Chainspace Web3 Developer Cohort I', 1, '2024-01-15', 'completed', 'First successful cohort with 18 graduates', 20, 18),
 ('Chainspace Web3 Developer Cohort II', 2, '2024-06-01', 'completed', 'Second cohort building on the success of the first', 25, 22),
 ('Chainspace Web3 Developer Cohort III', 3, '2025-01-15', 'open', 'Current cohort accepting applications for intensive 12-week Web3 development program', 30, 0);
 

@@ -56,7 +56,7 @@ const SecondCohort = () => {
             COHORT II EXCELLENCE
           </h2>
           <p className="text-chainspace-orange text-base sm:text-lg md:text-xl font-semibold">
-            SECOND BATCH • 20 GRADUATES • 11 EMPLOYED
+            SECOND BATCH • 31 GRADUATES 
           </p>
         </div>
 
