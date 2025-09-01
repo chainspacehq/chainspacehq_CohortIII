@@ -3,7 +3,7 @@ import creativeWorkspace from "@/assets/creative-team-workspace.jpg";
 
 const VolunteerOpportunities = () => {
   return (
-    <section className="relative min-h-screen bg-chainspace-black py-20">
+    <section className="relative min-h-screen bg-chainspace-black py-20 overflow-x-hidden overflow-y-hidden">
       <div className="geometric-lines opacity-10"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4">
@@ -22,7 +22,7 @@ const VolunteerOpportunities = () => {
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
           {/* Left Side - Position Info */}
           <div className="space-y-8">
             {/* Position Details */}
@@ -80,7 +80,7 @@ const VolunteerOpportunities = () => {
               <img 
                 src={creativeWorkspace} 
                 alt="Creative team workspace with modern design tools and collaborative environment"
-                className="w-full h-60 md:h-80 object-cover"
+                className="w-full h-40 sm:h-56 md:h-80 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-chainspace-black/80 via-transparent to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -120,7 +120,7 @@ const VolunteerOpportunities = () => {
             href="https://wa.me/2348104273165" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="explosive-btn px-12 py-6 text-xl font-black rounded-full inline-block"
+            className="explosive-btn px-6 md:px-12 py-3 md:py-6 text-lg md:text-xl font-black rounded-full inline-block w-full sm:w-auto text-center"
           >
             APPLY NOW
           </a>
